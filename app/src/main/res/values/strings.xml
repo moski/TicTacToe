@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="player1Name">X</string>
+    <string name="player2Name">O</string>
+    <string name="noScore">-</string>
+    <string name="start_the_game">Start The game</string>
+    <string name="player_turn">player %s turn</string>
+    <string name="player_won">player %s won</string>
+    <string name="tie">It\'s a tie, hit restart to play again</string>
+    <string name="restart_game">Restart Game</string>
+
+    <string-array name="google_glyph_strings">
+    </string-array>
+
+    <integer-array name="google_glyph_colors">
+    </integer-array>
+</resources>

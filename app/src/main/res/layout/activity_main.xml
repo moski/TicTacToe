@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.doski.moski.tictactoe.MainActivity">
+
+    <LinearLayout
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:id="@+id/scoreBoard"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:background="#fff">
+
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/player1Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/player1Name"
+                    android:background="#fff"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:text="@string/noScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/player1Score"
+                    android:background="?customTextViewBG"
+                    android:textAlignment="textEnd"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/selectPlayer1"
+                android:background="?currentPlayerColor"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:background="#fff">
+
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/player2Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/player2Name"
+                    android:background="#fff"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:text="@string/noScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/player2Score"
+                    android:background="?customTextViewBG"
+                    android:textAlignment="textEnd"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/selectPlayer2"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="@string/start_the_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scoreBoard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:id="@+id/hint"/>
+
+    <RelativeLayout
+        android:id="@+id/gameBoardContainer"
+        android:background="#26bcac"
+        android:layout_width="fill_parent"
+        android:layout_height="360dp"
+        android:layout_below="@+id/hint"
+        android:layout_marginTop="16dp">
+
+
+        <GridLayout
+            android:id="@+id/gameBoard"
+            android:background="@drawable/board"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:columnCount="3"
+            android:rowCount="3">
+
+            <com.jrummyapps.android.widget.AnimatedSvgView
+                android:id="@+id/row0Col0"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                app:animatedSvgFillColors="@array/google_glyph_colors"
+                app:animatedSvgFillStart="1200"
+                app:animatedSvgFillTime="1000"
+                app:animatedSvgGlyphStrings="@array/google_glyph_strings"
+                app:animatedSvgImageSizeX="90"
+                app:animatedSvgImageSizeY="90"
+                app:animatedSvgTraceMarkerLength="50"
+                app:animatedSvgTraceTime="2000"
+                app:animatedSvgTraceTimePerGlyph="1000"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:onClick="play"
+                android:tag="0"
+                />
+
+
+            <com.jrummyapps.android.widget.AnimatedSvgView
+                android:id="@+id/row0Col1"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="45dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                app:animatedSvgFillColors="@array/google_glyph_colors"
+                app:animatedSvgFillStart="1200"
+                app:animatedSvgFillTime="1000"
+                app:animatedSvgGlyphStrings="@array/google_glyph_strings"
+                app:animatedSvgImageSizeX="400"
+                app:animatedSvgImageSizeY="400"
+                app:animatedSvgTraceMarkerLength="50"
+                app:animatedSvgTraceTime="2000"
+                app:animatedSvgTraceTimePerGlyph="1000"
+                android:layout_width="90dp"
+                android:onClick="play"
+                android:tag="1"
+                />
+
+            <com.jrummyapps.android.widget.AnimatedSvgView
+                android:id="@+id/row0Col2"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="50dp"
+                android:layout_row="0"
+                android:layout_column="2"
+                app:animatedSvgFillColors="@array/google_glyph_colors"
+                app:animatedSvgFillStart="1200"
+                app:animatedSvgFillTime="1000"
+                app:animatedSvgGlyphStrings="@array/google_glyph_strings"
+                app:animatedSvgImageSizeX="400"
+                app:animatedSvgImageSizeY="400"
+                app:animatedSvgTraceMarkerLength="50"
+                app:animatedSvgTraceTime="2000"
+                app:animatedSvgTraceTimePerGlyph="1000"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:onClick="play"
+                android:tag="2"
+
+                />
+
+
+            <com.jrummyapps.android.widget.AnimatedSvgView
+                android:id="@+id/row1Col0"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                app:animatedSvgFillColors="@array/google_glyph_colors"
+                app:animatedSvgFillStart="1200"
+                app:animatedSvgFillTime="1000"
+                app:animatedSvgGlyphStrings="@array/google_glyph_strings"
+                app:animatedSvgImageSizeX="90"
+                app:animatedSvgImageSizeY="90"
+                app:animatedSvgTraceMarkerLength="50"
+                app:animatedSvgTraceTime="2000"
+                app:animatedSvgTraceTimePerGlyph="1000"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:onClick="play"
+                android:tag="3"
+                />
+
+
+            <com.jrummyapps.android.widget.AnimatedSvgView
+                android:id="@+id/row1Col1"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="45dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                app:animatedSvgFillColors="@array/google_glyph_colors"
+                app:animatedSvgFillStart="1200"
+                app:animatedSvgFillTime="1000"
+                app:animatedSvgGlyphStrings="@array/google_glyph_strings"
+                app:animatedSvgImageSizeX="400"
+                app:animatedSvgImageSizeY="400"
+                app:animatedSvgTraceMarkerLength="50"
+                app:animatedSvgTraceTime="2000"
+                app:animatedSvgTraceTimePerGlyph="1000"
+                android:layout_width="90dp"
+                android:onClick="play"
+                android:tag="4"
+                />
+
+            <com.jrummyapps.android.widget.AnimatedSvgView
+                android:id="@+id/row1Col2"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="50dp"
+                android:layout_row="1"
+                android:layout_column="2"
+                app:animatedSvgFillColors="@array/google_glyph_colors"
+                app:animatedSvgFillStart="1200"
+                app:animatedSvgFillTime="1000"
+                app:animatedSvgGlyphStrings="@array/google_glyph_strings"
+                app:animatedSvgImageSizeX="400"
+                app:animatedSvgImageSizeY="400"
+                app:animatedSvgTraceMarkerLength="50"
+                app:animatedSvgTraceTime="2000"
+                app:animatedSvgTraceTimePerGlyph="1000"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:onClick="play"
+                android:tag="5"
+                />
+
+            <com.jrummyapps.android.widget.AnimatedSvgView
+                android:id="@+id/row2Col0"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                app:animatedSvgFillColors="@array/google_glyph_colors"
+                app:animatedSvgFillStart="1200"
+                app:animatedSvgFillTime="1000"
+                app:animatedSvgGlyphStrings="@array/google_glyph_strings"
+                app:animatedSvgImageSizeX="90"
+                app:animatedSvgImageSizeY="90"
+                app:animatedSvgTraceMarkerLength="50"
+                app:animatedSvgTraceTime="2000"
+                app:animatedSvgTraceTimePerGlyph="1000"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:onClick="play"
+                android:tag="6"
+
+                />
+
+
+            <com.jrummyapps.android.widget.AnimatedSvgView
+                android:id="@+id/row2Col1"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="45dp"
+                android:layout_row="2"
+                android:layout_column="1"
+                app:animatedSvgFillColors="@array/google_glyph_colors"
+                app:animatedSvgFillStart="1200"
+                app:animatedSvgFillTime="1000"
+                app:animatedSvgGlyphStrings="@array/google_glyph_strings"
+                app:animatedSvgImageSizeX="400"
+                app:animatedSvgImageSizeY="400"
+                app:animatedSvgTraceMarkerLength="50"
+                app:animatedSvgTraceTime="2000"
+                app:animatedSvgTraceTimePerGlyph="1000"
+                android:layout_width="90dp"
+                android:onClick="play"
+                android:tag="7"
+                />
+
+            <com.jrummyapps.android.widget.AnimatedSvgView
+                android:id="@+id/row2Col2"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_row="2"
+                android:layout_column="2"
+                app:animatedSvgFillColors="@array/google_glyph_colors"
+                app:animatedSvgFillStart="1200"
+                app:animatedSvgFillTime="1000"
+                app:animatedSvgGlyphStrings="@array/google_glyph_strings"
+                app:animatedSvgImageSizeX="400"
+                app:animatedSvgImageSizeY="400"
+                app:animatedSvgTraceMarkerLength="50"
+                app:animatedSvgTraceTime="2000"
+                app:animatedSvgTraceTimePerGlyph="1000"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:onClick="play"
+                android:tag="8"
+                />
+
+        </GridLayout>
+    </RelativeLayout>
+
+
+
+    <Button
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:text="@string/restart_game"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="resetGame"
+        />
+
+</RelativeLayout>

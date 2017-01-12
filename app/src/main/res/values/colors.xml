@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#26bcac</color>
+    <color name="colorPrimaryDark">#1ea092</color>
+    <color name="colorAccent">#9f060d</color>
+    <color name="backgroundColor">#f8f8f8</color>
+    <color name="colorButtonNormal">#ffffff</color>
+
+    <color name="currentPlayer">#26bcac</color>
+    <color name="otherPlayer">#ffffff</color>
+</resources>
