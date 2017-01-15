@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
   android:id="@+id/activity_main"
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:orientation="vertical"
   tools:context="com.doski.moski.tictactoe.MainActivity">
 
   <LinearLayout
@@ -78,8 +79,6 @@
     style="?borderlessButtonStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_below="@+id/scoreBoard"
-    android:layout_centerHorizontal="true"
     android:layout_marginEnd="@dimen/activity_horizontal_margin"
     android:layout_marginStart="@dimen/activity_horizontal_margin"
     android:layout_marginTop="4dp"
@@ -87,16 +86,16 @@
 
   <RelativeLayout
     android:id="@+id/gameBoardContainer"
-    android:layout_width="fill_parent"
-    android:layout_height="360dp"
-    android:layout_below="@+id/startGameButton"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
     android:layout_marginTop="16dp"
+    android:layout_weight="1"
     android:background="#26bcac">
 
     <GridLayout
       android:id="@+id/gameBoard"
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
       android:background="@drawable/board"
       android:columnCount="3"
       android:rowCount="3">
@@ -311,4 +310,4 @@
     android:text="@string/restart_game"
     />
 
-</RelativeLayout>
+</LinearLayout>
