@@ -1,15 +1,33 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name= "android:windowBackground">@color/backgroundColor</item>
-        <item name="currentPlayerColor">@color/currentPlayer</item>
-        <item name="otherPlayerColor">@color/otherPlayer</item>
-        <item name="customTextViewBG">#fff</item>
-    </style>
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:windowBackground">@color/backgroundColor</item>
+    <item name="currentPlayerColor">@color/currentPlayer</item>
+    <item name="otherPlayerColor">@color/otherPlayer</item>
+    <item name="customTextViewBG">#fff</item>
+  </style>
+
+  <style name="PlayGridCellStyle">
+    <item name="android:background">@color/colorPrimary</item>
+    <item name="android:layout_width">90dp</item>
+    <item name="android:layout_height">90dp</item>
+    <item name="animatedSvgFillColors">@array/google_glyph_colors</item>
+    <item name="animatedSvgFillStart">1200</item>
+    <item name="animatedSvgFillTime">1000</item>
+    <item name="animatedSvgGlyphStrings">@array/google_glyph_strings</item>
+    <item name="animatedSvgImageSizeX">90</item>
+    <item name="animatedSvgImageSizeY">90</item>
+    <item name="animatedSvgTraceMarkerLength">50</item>
+    <item name="animatedSvgTraceTime">2000</item>
+    <item name="animatedSvgTraceTimePerGlyph">1000</item>
+    <item name="layout_columnWeight">1</item>
+    <item name="layout_gravity">fill_horizontal</item>
+    <item name="layout_rowWeight">1</item>
+  </style>
 
 </resources>

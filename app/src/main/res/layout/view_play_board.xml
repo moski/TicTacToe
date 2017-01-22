@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  android:id="@+id/gameBoard"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#289F92"
+  app:columnCount="3"
+  app:rowCount="3"
+  app:useDefaultMargins="true"
+  tools:parentTag="android.support.v7.widget.GridLayout">
+
+  <com.jrummyapps.android.widget.AnimatedSvgView
+    android:id="@+id/row0Col0"
+    style="@style/PlayGridCellStyle"
+    android:onClick="play"
+    android:tag="0"
+    />
+
+  <com.jrummyapps.android.widget.AnimatedSvgView
+    android:id="@+id/row0Col1"
+    style="@style/PlayGridCellStyle"
+    android:onClick="play"
+    android:tag="1"
+    />
+
+  <com.jrummyapps.android.widget.AnimatedSvgView
+    android:id="@+id/row0Col2"
+    style="@style/PlayGridCellStyle"
+    android:onClick="play"
+    android:tag="2"
+    />
+
+  <com.jrummyapps.android.widget.AnimatedSvgView
+    android:id="@+id/row1Col0"
+    style="@style/PlayGridCellStyle"
+    android:onClick="play"
+    android:tag="3"
+    />
+
+
+  <com.jrummyapps.android.widget.AnimatedSvgView
+    android:id="@+id/row1Col1"
+    style="@style/PlayGridCellStyle"
+    android:onClick="play"
+    android:tag="4"
+    />
+
+  <com.jrummyapps.android.widget.AnimatedSvgView
+    android:id="@+id/row1Col2"
+    style="@style/PlayGridCellStyle"
+    android:onClick="play"
+    android:tag="5"
+    />
+
+  <com.jrummyapps.android.widget.AnimatedSvgView
+    android:id="@+id/row2Col0"
+    style="@style/PlayGridCellStyle"
+    android:onClick="play"
+    android:tag="6"
+    />
+
+
+  <com.jrummyapps.android.widget.AnimatedSvgView
+    android:id="@+id/row2Col1"
+    style="@style/PlayGridCellStyle"
+    android:onClick="play"
+    android:tag="7"
+    />
+
+  <com.jrummyapps.android.widget.AnimatedSvgView
+    android:id="@+id/row2Col2"
+    style="@style/PlayGridCellStyle"
+    android:onClick="play"
+    android:tag="8"
+    />
+</merge>

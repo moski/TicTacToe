@@ -111,14 +111,14 @@
         android:layout_below="@+id/scoreBoard"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
-        android:id="@+id/hint"/>
+        android:id="@+id/startGameButton"/>
 
     <RelativeLayout
         android:id="@+id/gameBoardContainer"
         android:background="#26bcac"
         android:layout_width="fill_parent"
         android:layout_height="360dp"
-        android:layout_below="@+id/hint"
+        android:layout_below="@+id/startGameButton"
         android:layout_marginTop="16dp">
 
 
@@ -333,7 +333,7 @@
         android:text="@string/restart_game"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button4"
+        android:id="@+id/restartGameButton"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
         android:layout_centerHorizontal="true"

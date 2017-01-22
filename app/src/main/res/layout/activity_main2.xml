@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  android:id="@+id/activity_main"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:paddingBottom="@dimen/activity_vertical_margin"
+  android:paddingTop="@dimen/activity_vertical_margin"
+  tools:context="com.doski.moski.tictactoe.MainActivity">
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:background="#300F">
+
+    <LinearLayout
+      android:id="@+id/player1ScoreLayout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:layout_weight="1"
+      android:background="@drawable/shape_player_underline"
+      android:orientation="horizontal"
+      android:padding="10dp">
+
+      <TextView
+        android:id="@+id/player1Name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:text="@string/player1Name"/>
+
+      <TextView
+        android:id="@+id/player1Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?customTextViewBG"
+        android:text="@string/noScore"
+        android:textAlignment="textEnd"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/player2ScoreLayout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:background="#FFF"
+      android:orientation="horizontal"
+      android:padding="10dp">
+
+      <TextView
+        android:id="@+id/player2Name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:text="@string/player2Name"/>
+
+      <TextView
+        android:id="@+id/player2Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?customTextViewBG"
+        android:text="@string/noScore"
+        android:textAlignment="textEnd"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <Button
+    android:id="@+id/startGameButton"
+    style="?borderlessButtonStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="8dp"
+    android:text="@string/start_the_game"/>
+
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+
+    <com.doski.moski.tictactoe.widget.PlayGridView
+      android:id="@+id/gameBoard"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:background="#22897E"/>
+  </FrameLayout>
+
+  <Button
+    android:id="@+id/restartGameButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:onClick="resetGame"
+    android:text="@string/restart_game"
+    />
+
+</LinearLayout>
