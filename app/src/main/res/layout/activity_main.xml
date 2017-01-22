@@ -111,14 +111,14 @@
         android:layout_below="@+id/scoreBoard"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
-        android:id="@+id/startGameButton"/>
+        android:id="@+id/gameHintView"/>
 
     <RelativeLayout
         android:id="@+id/gameBoardContainer"
         android:background="#26bcac"
         android:layout_width="fill_parent"
         android:layout_height="360dp"
-        android:layout_below="@+id/startGameButton"
+        android:layout_below="@+id/gameHintView"
         android:layout_marginTop="16dp">
 
 

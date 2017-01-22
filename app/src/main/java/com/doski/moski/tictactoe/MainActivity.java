@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main2);
 
     game = new Game(this);
-    hint = (TextView) findViewById(R.id.startGameButton);
+    hint = (TextView) findViewById(R.id.gameHintView);
     hint.setText(game.hint());
 
     player1Selector = findViewById(R.id.player1ScoreLayout);
